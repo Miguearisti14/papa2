@@ -15,13 +15,10 @@ let alto = (canvasConfeti.height = window.innerHeight);
 let confetis = [];
 
 const coloresConfeti = [
-  "rgba(255, 155, 170, 1)",
-  "rgba(224, 130, 144, 1)",
-  "rgba(251, 208, 214, 1)",
-  "rgba(248, 93, 116, 1)",
-  "rgba(246, 121, 139, 1)",
-  "rgba(238, 174, 184, 1)",
-  "rgba(255, 255, 255, 1)",
+  "rgba(173, 216, 230, 1)", /* azul claro */
+  "rgba(0, 0, 139, 1)",    /* azul oscuro */
+  "rgba(255, 255, 255, 1)",/* blanco */
+  "rgba(192, 192, 192, 1)",/* plateado */
 ];
 
 //
@@ -44,8 +41,7 @@ function crearConfeti() {
 // 3. Dibujar y Mover Confeti
 //
 function animarConfeti() {
-  ctxConfeti.fillStyle = "rgba(255, 182, 193, 1)"; // Fondo Rosa Pastel
-  ctxConfeti.fillRect(0, 0, ancho, alto);
+  ctxConfeti.clearRect(0, 0, ancho, alto);
 
   for (let i = 0; i < confetis.length; i++) {
     let confetiActual = confetis[i];
